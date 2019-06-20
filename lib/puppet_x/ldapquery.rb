@@ -70,7 +70,7 @@ module PuppetX
       if tls
         conf[:encryption] = {
           method: :simple_tls,
-          tls_options: { ca_file: ca_file }
+          tls_options: { verify_mode: OpenSSL::SSL::VERIFY_NONE }
         }
       end
 
